@@ -4,24 +4,21 @@
 import PackageDescription
 
 let package = Package(
-    name: "SchedJoulesApiClient",
+    name: "SchedJoulesApi",
     platforms: [.iOS(.v14), .macCatalyst(.v13)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "SchedJoulesApiClient",
-            targets: ["ApiClient"]),
+            name: "SchedJoulesApi",
+            targets: ["SchedJoulesApiClient"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "ApiClient",
+            name: "SchedJoulesApiClient",
             path: "ApiClient/Source",
         ),
         .testTarget(
             name: "ApiClientTest",
-            dependencies: ["ApiClient"],
+            dependencies: ["SchedJoulesApiClient"],
             path: "ApiClient/Tests",
             resources: [.copy("Sample JSONs/")]
         ),
