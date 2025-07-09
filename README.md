@@ -1,3 +1,5 @@
+Dependency of [Calendar](https://github.com/readdle/calendars) Project
+
 # Swift API Client
 
 This repository contains the API client written in Swift, which is also used by our Swift SDK. Versions 0.8.0+ don't use any external libraries, in order to give our users complete freedom on their pick for Networking solutions.
